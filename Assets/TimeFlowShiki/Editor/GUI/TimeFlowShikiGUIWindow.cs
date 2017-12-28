@@ -365,8 +365,6 @@ namespace TimeFlowShiki {
 			*/
 			score.SelectTackAtFrame(selectedFrame);
 		}
-		
-		int activeAutoIndex = 0;
 
 		/**
 			draw GUI
