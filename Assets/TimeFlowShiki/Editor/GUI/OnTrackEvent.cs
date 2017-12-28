@@ -1,40 +1,41 @@
-using UnityEngine;
+namespace TimeFlowShiki
+{
+    public class OnTrackEvent
+    {
+        public enum TrackEventType
+        {
+            ScoreAddTimeline,
 
-namespace TimeFlowShiki {
-	public class OnTrackEvent {
-		public enum EventType : int {
-			EVENT_NONE,
+            TimelineAddTack,
+            TimelineDelete,
+            TimelineBeforeSave,
+            TimelineSave,
 
-			EVENT_SCORE_ADDTIMELINE,
+            TackMoving,
+            TackMoved,
+            TackMovedAfter,
+            TackDeleted,
+            TackBeforeSave,
+            TackSave,
 
-			EVENT_TIMELINE_ADDTACK,
-			EVENT_TIMELINE_DELETE,
-			EVENT_TIMELINE_BEFORESAVE,
-			EVENT_TIMELINE_SAVE,
+            ObjectSelected,
+            Unselected
+        }
 
-			EVENT_TACK_MOVING,
-			EVENT_TACK_MOVED,
-			EVENT_TACK_MOVED_AFTER,
-			EVENT_TACK_DELETED,
-			EVENT_TACK_BEFORESAVE,
-			EVENT_TACK_SAVE,
+        public readonly TrackEventType TrackEvent;
+        public readonly string ActiveObjectId;
+        public readonly int Frame;
 
-			EVENT_OBJECT_SELECTED,
-			EVENT_UNSELECTED,
-		}
+        public OnTrackEvent(TrackEventType trackEvent, string activeObjectId, int frame = -1)
+        {
+            TrackEvent = trackEvent;
+            ActiveObjectId = activeObjectId;
+            Frame = frame;
+        }
 
-		public readonly EventType eventType;
-		public readonly string activeObjectId;
-		public readonly int frame;
-
-		public OnTrackEvent (OnTrackEvent.EventType eventType, string activeObjectId, int frame=-1) {
-			this.eventType = eventType;
-			this.activeObjectId = activeObjectId;
-			this.frame = frame;
-		}
-
-		public OnTrackEvent Copy () {
-			return new OnTrackEvent(this.eventType, this.activeObjectId, this.frame);
-		}
-	}
+        public OnTrackEvent Copy()
+        {
+            return new OnTrackEvent(TrackEvent, ActiveObjectId, Frame);
+        }
+    }
 }

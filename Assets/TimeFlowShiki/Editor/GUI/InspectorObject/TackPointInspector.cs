@@ -1,12 +1,15 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-namespace TimeFlowShiki {
-	public class TackPointInspector : ScriptableObject {
-		public TackPoint tackPoint;
 
-		public void UpdateTackPoint (TackPoint tackPoint) {
-			this.tackPoint = tackPoint;
-		}
-	}
+namespace TimeFlowShiki
+{
+    public class TackPointInspector : ScriptableObject
+    {
+        public TackPoint TackPoint;
+
+        public void UpdateTackPoint(TackPoint tackPoint)
+        {
+            TackPoint = tackPoint;
+        }
+    }
 }
