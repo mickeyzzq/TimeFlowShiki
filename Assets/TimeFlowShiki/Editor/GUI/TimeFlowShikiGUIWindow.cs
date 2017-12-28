@@ -100,9 +100,6 @@ namespace TimeFlowShiki {
 			*/
 			if (lastModified == lastLoaded) return;
 			lastLoaded = lastModified;
-
-			var indexPoint = new Vector2(0, 0);
-			var visibleTrackWidth = this.position.width - indexPoint.x;
 			
 			if (deserialized.Any()) scores = LoadScores(deserialized);
 
@@ -386,8 +383,6 @@ namespace TimeFlowShiki {
 		}
 
 		private void DrawAutoConponent (float viewWidth) {
-			var changedInDraw = false;
-
 			var xScrollIndex = -scrollPos;
 			var yOffsetPos = 0f;
 
