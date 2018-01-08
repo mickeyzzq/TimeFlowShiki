@@ -187,7 +187,6 @@ namespace TimeFlowShiki
             {
                 switch (Event.current.type)
                 {
-
                     case EventType.ContextClick:
                     {
                         ShowContextMenu();
@@ -340,7 +339,6 @@ namespace TimeFlowShiki
 
         private bool BeginTackModify(Rect tackBGRect, Vector2 beginPoint)
         {
-
             switch (Event.current.type)
             {
                 case EventType.MouseDown:
@@ -380,7 +378,6 @@ namespace TimeFlowShiki
 
         private bool RecognizeTackModify(Vector2 mousePos)
         {
-
             switch (Event.current.type)
             {
                 case EventType.MouseDrag:
