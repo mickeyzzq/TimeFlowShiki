@@ -1,8 +1,10 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-namespace TimeFlowShiki {
-	public class ScoreComponentInspector : ScriptableObject {
-		public string title;
-	}
+
+namespace TimeFlowShiki
+{
+    public class ScoreComponentInspector : ScriptableObject
+    {
+        public string Title;
+    }
 }

@@ -1,12 +1,15 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-namespace TimeFlowShiki {
-	public class TimelineTrackInspector : ScriptableObject {
-		public TimelineTrack timelineTrack;
 
-		public void UpdateTimelineTrack (TimelineTrack timelineTrack) {
-			this.timelineTrack = timelineTrack;
-		}
-	}
+namespace TimeFlowShiki
+{
+    public class TimelineTrackInspector : ScriptableObject
+    {
+        public TimelineTrack TimelineTrack;
+
+        public void UpdateTimelineTrack(TimelineTrack timelineTrack)
+        {
+            TimelineTrack = timelineTrack;
+        }
+    }
 }
